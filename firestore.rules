@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Replace REPLACE_WITH_ADMIN_UID with the UID of the admin account
+    // from Firebase Console > Authentication > Users.
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid == "REPLACE_WITH_ADMIN_UID";
+    }
+
+    match /site/{document} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /listings/{listingId} {
+      allow read: if true;
+      allow create: if isAdmin()
+        && request.resource.data.keys().hasOnly([
+          "type", "title", "description", "priceLabel", "infoUrl", "createdAt"
+        ])
+        && request.resource.data.title is string
+        && request.resource.data.title.size() <= 70
+        && request.resource.data.description is string
+        && request.resource.data.description.size() <= 500;
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    match /gallery/{imageId} {
+      allow read: if true;
+      allow create: if isAdmin()
+        && request.resource.data.keys().hasOnly([
+          "imageUrl", "caption", "createdAt"
+        ])
+        && request.resource.data.imageUrl is string
+        && request.resource.data.caption is string
+        && request.resource.data.caption.size() <= 60;
+      allow update, delete: if isAdmin();
+    }
+  }
+}

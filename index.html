@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909"><meta name="description" content="FF ID STORE — gaming community and updates">
+<title>FF ID STORE | Official Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="shell nav"><a class="logo" href="#home">FF <span>ID STORE</span></a><nav><a href="#home">Home</a><a href="#store">Store</a><a href="#gallery">Gallery</a><a href="#groups">Groups</a><a href="#contact">Contact</a></nav><button class="admin-open" id="openAdmin">ADMIN</button></div></header>
+<main>
+<section class="hero" id="home"><div class="shell hero-inner"><div class="eyebrow">GAMING • COMMUNITY • UPDATES</div><h1>YOUR GAME.<br><span>YOUR COMMUNITY.</span></h1><p id="heroText">Welcome to FF ID STORE. Explore community posts, gaming highlights and official group links.</p><div class="actions"><a class="btn" id="heroWa" href="#" target="_blank" rel="noopener">Join WhatsApp</a><a class="btn outline" id="heroTg" href="#" target="_blank" rel="noopener">Join Telegram</a></div></div></section>
+<section class="section" id="store"><div class="shell"><div class="section-title"><small>FEATURED</small><h2>Store & Updates</h2><p>Community listings and top-up information. Check all publisher rules and use authorized top-up channels only.</p></div><div class="cards" id="listingCards"><p class="muted">Loading posts…</p></div></div></section>
+<section class="section dark-section" id="gallery"><div class="shell"><div class="section-title"><small>SCREENSHOTS & HIGHLIGHTS</small><h2>Gaming Gallery</h2><p>Highlights from the FF ID STORE community.</p></div><div class="gallery" id="galleryCards"><p class="muted">Loading gallery…</p></div></div></section>
+<section class="section" id="groups"><div class="shell"><div class="section-title"><small>JOIN THE COMMUNITY</small><h2>Our Social Groups</h2><p>Choose a community link below.</p></div><div class="groups" id="groupCards"></div></div></section>
+<section class="section" id="contact"><div class="shell contact"><div><small>CONTACT</small><h2>Let's Connect.</h2><p id="contactText">For questions and support, reach us through our social channels.</p></div><a class="btn" id="contactWa" href="#" target="_blank" rel="noopener">WhatsApp Support</a></div></section>
+</main>
+<footer><div class="shell foot"><span>© <span id="year"></span> FF ID STORE</span><span>Independent fan/community website. Not affiliated with Garena.</span></div></footer>
+
+<dialog id="adminDialog"><div class="dialog-head"><div><small>PRIVATE AREA</small><h2>Admin dashboard</h2></div><button class="x" id="closeAdmin" aria-label="Close">×</button></div>
+<div id="setupNotice" class="notice" hidden>Firebase is not configured yet. Complete the setup in <b>README-ANDROID.txt</b>, then reload this page.</div>
+<div id="loginPanel"><p class="muted">Sign in with the admin email created in Firebase Authentication.</p><label>Email<input id="adminEmail" type="email" autocomplete="username" placeholder="admin@example.com"></label><label>Password<input id="adminPass" type="password" autocomplete="current-password" placeholder="Your password"></label><button class="btn full" id="loginBtn">Sign in</button><p id="loginMsg" class="form-msg"></p></div>
+<div id="dashboard" hidden>
+<div class="admin-bar"><span id="signedInAs"></span><button class="btn outline small" id="logoutBtn">Sign out</button></div>
+<div class="tabs"><button class="tab active" data-tab="settings">Site links</button><button class="tab" data-tab="posts">Store posts</button><button class="tab" data-tab="galleryAdmin">Gallery</button></div>
+<div class="tab-panel" id="tab-settings">
+<label>Home welcome text<textarea id="setHero" rows="3"></textarea></label>
+<div class="two"><label>WhatsApp group invite URL<input id="setWa" placeholder="https://chat.whatsapp.com/..."></label><label>Telegram group URL<input id="setTg" placeholder="https://t.me/..."></label><label>Instagram group/profile URL<input id="setInsta" placeholder="https://instagram.com/..."></label><label>WhatsApp contact number<input id="setPhone" placeholder="91XXXXXXXXXX"></label></div>
+<label>Contact section text<textarea id="setContact" rows="2"></textarea></label><button class="btn" id="saveSettings">Save site links</button><p class="form-msg" id="settingsMsg"></p></div>
+<div class="tab-panel" id="tab-posts" hidden><h3>Add a store post</h3><label>Post type<select id="postType"><option value="Account showcase">Account showcase</option><option value="Top-up information">Top-up information</option><option value="Announcement">Announcement</option></select></label><label>Title<input id="postTitle" maxlength="70" placeholder="Post title"></label><label>Description<textarea id="postDesc" rows="3" maxlength="500" placeholder="Describe the post. Never include passwords, OTPs or private account credentials."></textarea></label><div class="two"><label>Price/info label (optional)<input id="postPrice" maxlength="35" placeholder="e.g. See official offer"></label><label>Official top-up/info URL (optional)<input id="postUrl" placeholder="https://..."></label></div><button class="btn" id="addPost">Publish post</button><div id="adminPostList" class="manage-list"></div></div>
+<div class="tab-panel" id="tab-galleryAdmin" hidden><h3>Add gallery image</h3><label>Image URL<input id="galleryUrl" placeholder="https://..."></label><label>Caption<input id="galleryCaption" maxlength="60" placeholder="Gameplay highlight"></label><button class="btn" id="addGallery">Add image</button><div id="adminGalleryList" class="manage-list"></div></div>
+<p class="notice">Safety: do not collect or publish game passwords, OTPs, recovery codes, payment PINs or private account data. Account transfers may breach game rules. Top-up links should lead only to official/authorized providers. No payment processing is enabled on this site.</p>
+</div></dialog>
+<script type="module" src="app.js"></script>
+</body></html>

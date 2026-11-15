@@ -1,8 +1,8 @@
-// Paste the Firebase web app config from Firebase Console > Project settings > Your apps.
-// This config is public in a browser app. Security comes from Authentication + Firestore Rules.
-export const firebaseConfig = {
-  apiKey: "PASTE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  appId: "PASTE_APP_ID"
+ export const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "ff-id-store-78f4e.firebaseapp.com",
+  projectId: "ff-id-store-78f4e",
+  storageBucket: "ff-id-store-78f4e.firebasestorage.app",
+  messagingSenderId: "791886879517",
+  appId: "1:791886879517:web:2de6658e16da3ca8ac5ff4"
 };

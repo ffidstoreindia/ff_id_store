@@ -391,3 +391,80 @@ dialog::backdrop {
   .hero-inner { padding-top: 55px; padding-bottom: 55px; }
   .hero-stats { gap: 22px; }
 }
+
+/* FF ID STORE - PREMIUM STORE CARDS */
+.section {
+  padding: 85px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title small {
+  color: #c084fc;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  color: #fff;
+  font-family: Orbitron, sans-serif;
+  font-size: clamp(25px, 5vw, 40px);
+  margin: 12px 0;
+}
+
+.section-title p {
+  color: #a99caf;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+#listingCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+#listingCards > * {
+  background: linear-gradient(145deg,#1b1028,#0c0912);
+  border: 1px solid rgba(168,85,247,.35);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  transition: .3s ease;
+}
+
+#listingCards > *:hover {
+  transform: translateY(-7px);
+  border-color: #bd70ff;
+  box-shadow: 0 12px 35px rgba(168,85,247,.2);
+}
+
+#listingCards h3 {
+  color: #e7caff;
+}
+
+#listingCards p {
+  color: #b8adbf;
+  line-height: 1.7;
+}
+
+#listingCards a,
+#listingCards button {
+  background: linear-gradient(110deg,#7619c4,#bd1745);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 16px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.dark-section {
+  background: #0b0710;
+  border-top: 1px solid rgba(168,85,247,.15);
+  border-bottom: 1px solid rgba(168,85,247,.15);
+}

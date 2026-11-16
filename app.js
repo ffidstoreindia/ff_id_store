@@ -67,7 +67,9 @@ if (configured) {
   const app=initializeApp(firebaseConfig); auth=getAuth(app); db=getFirestore(app);
   onAuthStateChanged(auth,user=>{if(user && !$("adminDialog").open) { currentUser=user; }});
 } else { $("setupNotice").hidden=false; $("loginBtn").disabled=true; setMessage("loginMsg","Firebase config has not been added yet."); }
-await refreshAll();
+refreshAll().catch(error => {
+  console.error("Initial loading error:", error);
+});
 
 $("openAdmin").addEventListener("click",()=> $("adminDialog").showModal());
 $("closeAdmin").addEventListener("click",()=> $("adminDialog").close());

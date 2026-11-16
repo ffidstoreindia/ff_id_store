@@ -512,3 +512,45 @@ dialog::backdrop {
 #galleryCards a:hover {
   color: #ff6688;
 }
+
+/* FF ID STORE - SOCIAL COMMUNITY CARDS */
+#groups .groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+#groups .groups > * {
+  background: linear-gradient(145deg,#1b1028,#0b0810);
+  border: 1px solid rgba(168,85,247,.35);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: .3s ease;
+}
+
+#groups .groups > *:hover {
+  transform: translateY(-6px);
+  border-color: #d080ff;
+  box-shadow: 0 12px 30px rgba(168,85,247,.2);
+}
+
+#groups .groups h3 {
+  color: #e6c8ff;
+}
+
+#groups .groups p {
+  color: #b8adbf;
+  line-height: 1.6;
+}
+
+#groups .groups a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background: linear-gradient(110deg,#7619c4,#bd1745);
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}

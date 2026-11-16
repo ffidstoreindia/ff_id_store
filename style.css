@@ -468,3 +468,47 @@ dialog::backdrop {
   border-top: 1px solid rgba(168,85,247,.15);
   border-bottom: 1px solid rgba(168,85,247,.15);
 }
+
+/* FF ID STORE - PREMIUM GAMING GALLERY */
+#galleryCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+#galleryCards > * {
+  overflow: hidden;
+  background: linear-gradient(145deg,#1c1029,#0b0810);
+  border: 1px solid rgba(168,85,247,.3);
+  border-radius: 15px;
+  padding: 12px;
+  transition: .3s ease;
+}
+
+#galleryCards > *:hover {
+  transform: translateY(-6px);
+  border-color: #c084fc;
+  box-shadow: 0 12px 30px rgba(168,85,247,.2);
+}
+
+#galleryCards img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+#galleryCards p {
+  color: #d7c8e4;
+  padding: 8px 4px;
+}
+
+#galleryCards a {
+  color: #d8a5ff;
+  text-decoration: none;
+}
+
+#galleryCards a:hover {
+  color: #ff6688;
+}

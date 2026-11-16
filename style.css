@@ -554,3 +554,72 @@ dialog::backdrop {
   text-decoration: none;
   font-weight: 800;
 }
+/* FF ID STORE - CONTACT & FOOTER */
+#contact .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 35px;
+  border: 1px solid rgba(168,85,247,.4);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 90% 20%,rgba(168,85,247,.18),transparent 45%),
+    linear-gradient(135deg,#1b1028,#0b0810);
+  box-shadow: 0 12px 35px rgba(0,0,0,.3);
+}
+
+#contact .contact small {
+  color: #c084fc;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+#contact .contact h2 {
+  color: white;
+  font-family: Orbitron,sans-serif;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+#contact .contact p {
+  color: #b8adbf;
+  line-height: 1.7;
+}
+
+#contact .contact .btn {
+  flex-shrink: 0;
+}
+
+footer {
+  background: #07050a;
+  border-top: 1px solid rgba(168,85,247,.25);
+  padding: 25px 0;
+}
+
+footer .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  color: #92869e;
+  font-size: 12px;
+}
+
+@media(max-width:600px) {
+  #contact .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+  }
+
+  #contact .contact h2 {
+    font-size: 25px;
+  }
+
+  footer .foot {
+    flex-direction: column;
+    text-align: center;
+  }
+}
